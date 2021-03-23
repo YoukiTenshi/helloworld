@@ -1,27 +1,27 @@
-from . import somsub
-from . import muldiv
+from somsub import *
+from muldiv import *
 
 def printCute(resultado):
     print('Resultado:  ',resultado)
 
 print('Essa é a Calculeira')
-calculo = input('O que deseja fazer? Digite: "so" para soma, "su" para subtração, "mu" para multiplicação ou "di" para divisão:  ')
+what = input('O que deseja fazer? Digite: "so" para soma, "su" para subtração, "mu" para multiplicação ou "di" para divisão:  ')
 
-a = input('Insira o primeiro valor:  ')
-b = input('Insira o segundo valor:  ')
+a = int(input('Insira o primeiro valor:  '))
+b = int(input('Insira o segundo valor:  '))
 
-if calculo = 'so':
-    res = somsub.somar(a,b)
+if what == 'so':
+    res = somar(a,b)
     printCute(res)
     
-if calculo = 'su':
-    res = somsub.subtrair(a,b)
+if what == 'su':
+    res = subtrair(a,b)
     printCute(res)
 
-if calculo = 'mu':
-    res = muldiv.multiplicar(a,b)
+if what == 'mu':
+    res = multiplicar(a,b)
     printCute(res)
 
-if calculo = 'di':
-    res = muldiv.dividir(a,b)
+if what == 'di':
+    res = dividir(a,b)
     printCute(res)
